@@ -13,8 +13,11 @@
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "1.0.0",
     "gulp-clean-css": "^2.0.13",
+    "gulp-image": "^2.7.2",
     "gulp-jade": "^1.1.0",
-    "gulp-sass": "^2.1.0"
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^1.0.1"
   },
   "repository": {
     "type": "git",
