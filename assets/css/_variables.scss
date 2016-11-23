@@ -1,0 +1,63 @@
+@function rem($pxval) {
+  @return ($pxval / 16) * 1rem;
+}
+
+$headingFont: 'Open Sans', Arial, sans-serif;
+$bodyFont: 'Open Sans', Arial, sans-serif;
+
+// Font weights for Open Sans
+$font-light: 	 300; // light
+$font-reg: 		 400; // normal
+$font-semibold:  600; // semibold
+
+// Font Sizes
+// ========================================================
+$base-font-size:   16px;
+
+// Line Heights
+// ========================================================
+$baseline-ratio:        1.5;
+$base-line-height:      rem(16) * $baseline-ratio; // 24px
+$baseline:              $base-font-size * $baseline-ratio;
+
+
+// Colors
+// UI Messages
+$blue-light: #91daee;
+$success: #15c26b;
+$caution: #ecc81a;
+$warning: #f04546;
+
+// Core Palette
+$grey-text: #525c65;
+$grey-text-light: #757c81;
+$blue-udacity: #02b3e4;
+$tomato: #f95c3c;
+$turquoise: #02ccba;
+$tangerine: #ffae0c;
+
+// Neutral Palette
+$cool-grey-dark: #2e3d49;
+$cool-grey-medium-dark: #7d97ad;
+$cool-grey-medium: #dbe2e8;
+$cool-grey-light: #fafbfc;
+$warm-grey-dark: #c4c4b9;
+$warm-grey-medium-dark: #dfdfd1;
+$warm-grey-medium: #eaeae0;
+$warm-grey-light: #f4f4ef;
+
+// Background Colors
+// ========================================================
+$base-bg-color:       $cool-grey-light;
+$secondary-bg-color:  $warm-grey-light;
+
+// breakpoints defined - mobile first
+// ========================================================
+$max-width:       rem(1180);
+$max-outer-width: rem(1440);
+
+$size-xs: rem(320);
+$size-sm: rem(480);
+$size-md: rem(768);
+$size-lg: rem(992);
+$size-xl: rem(1180);
