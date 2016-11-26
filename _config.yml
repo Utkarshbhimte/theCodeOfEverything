@@ -1,5 +1,5 @@
 name: The Code of Everything
-highlighter: pygments # or rouge or null
+highlighter: rouge # or rouge or null
 
 # Site settings
 title: The Code Of Everything
