@@ -73,7 +73,7 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({
             stream: true
         }))
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('assets/css'));
 });
 
 /**
@@ -86,6 +86,7 @@ gulp.task('watch', function() {
     gulp.watch('assets/images/*', ['image']);
     gulp.watch('_jadefiles/*.jade', ['jade', 'jekyll-rebuild']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch('manifest.json',['manifest-transfer']);
 });
 
 gulp.task('image', function() {
@@ -104,9 +105,14 @@ gulp.task('compress', function(cb) {
     );
 });
 
+gulp.task('manifest-transfer', function(){
+  gulp.src('manifest.json')
+      .pipe(gulp.dest('_site/'));
+});
+
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['image', 'compress', 'browser-sync', 'watch','jade']);
+gulp.task('default', ['image', 'compress', 'browser-sync', 'watch','jade','manifest-transfer']);

@@ -1,0 +1,23 @@
+{
+  "name": "The Code of Everything",
+  "short_name": "TCOE",
+  "description": "This is a Blog to log all my progress of my Projects.",
+  "lang": "en-US",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#7CC6FE",
+  "icons": [
+    {
+      "src": "assets/images/logo-ub_small.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/logo-ub.svg",
+      "type": "image/svg"
+    }
+  ],
+  "background_color": "#228CDB"
+}

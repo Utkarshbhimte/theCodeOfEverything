@@ -14,13 +14,3 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 # Build settings
 markdown: kramdown
-
-
-# Manifest settings (Used to make manifest.json)
-# Edit manifest.json directly with icon information
-manifest_name: Web App Full Name
-manifest_short_name: Short Name # Appears in "Add to home screen" dialogues
-manifest_lang: en
-manifest_background_color: white
-manifest_short_name:
-manifest_display: standalone
