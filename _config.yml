@@ -1,4 +1,26 @@
-name: Your New Jekyll Site
-markdown: redcarpet
+name: The Code of Everything
 highlighter: pygments # or rouge or null
+
+# Site settings
+title: The Code Of Everything
+email: Utkarshbhimte95@gmail.com
+description: > # Ipsum Lorem blah blah blah
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+
+# Build settings
+markdown: redcarpet
+
+
+# Manifest settings (Used to make manifest.json)
+# Edit manifest.json directly with icon information
+manifest_name: Web App Full Name
+manifest_short_name: Short Name # Appears in "Add to home screen" dialogues
+manifest_lang: en
+manifest_background_color: white
+manifest_short_name:
+manifest_display: standalone

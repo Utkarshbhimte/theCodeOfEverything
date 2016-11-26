@@ -35,7 +35,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'jade', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -84,7 +84,8 @@ gulp.task('watch', function() {
     gulp.watch('assets/js/*.js', ['compress']);
     gulp.watch('assets/css/*.sass', ['sass']);
     gulp.watch('assets/images/*', ['image']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_jadefiles'], ['jekyll-rebuild']);
+    gulp.watch('_jadefiles/*.jade', ['jade', 'jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
 gulp.task('image', function() {
@@ -108,4 +109,4 @@ gulp.task('compress', function(cb) {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['image', 'compress', 'browser-sync', 'watch']);
+gulp.task('default', ['image', 'compress', 'browser-sync', 'watch','jade']);
