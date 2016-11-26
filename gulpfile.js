@@ -82,10 +82,10 @@ gulp.task('sass', function() {
  */
 gulp.task('watch', function() {
     gulp.watch('assets/js/*.js', ['compress']);
-    gulp.watch('assets/css/*.sass', ['sass']);
     gulp.watch('assets/images/*', ['image']);
     gulp.watch('_jadefiles/*.jade', ['jade', 'jekyll-rebuild']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch('assets/css/*.sass', ['sass']);
     gulp.watch('manifest.json',['manifest-transfer']);
 });
 
