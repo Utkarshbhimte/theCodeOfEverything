@@ -69,7 +69,7 @@ gulp.task('sass', function() {
         .pipe(cleanCSS({
             compatibility: 'ie8'
         }))
-        .pipe(gulp.dest('_site/css'))
+        .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
