@@ -1,0 +1,37 @@
+{
+  "name": "The Code of Everything",
+  "short_name": "TCOE",
+  "description": "This is a Blog to log all my progress of my Projects.",
+  "lang": "en-US",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#000000",
+  "icons": [{
+    "src": "assets/images/mipmap-hdpi/ic_launcher.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "assets/images/mipmap-mdpi/ic_launcher.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "assets/images/mipmap-xhdpi/ic_launcher.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "assets/images/mipmap-xxhdpi/ic_launcher.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "assets/images/mipmap-xxxhdpi/ic_launcher.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "assets/images/Icon.svg",
+    "sizes": "192x192",
+    "type": "image/svg"
+  }],
+  "background_color": "#FFFFFF"
+}

@@ -1,0 +1,7 @@
+{% for posts in site.posts %}
+.blog-card
+  .container
+    h4 {{post.title}}
+    p {{post.content}}
+    span.author {{post.author}}
+{% endfor %}

@@ -6,7 +6,7 @@ title: The Code Of Everything
 email: Utkarshbhimte95@gmail.com
 description: > # Ipsum Lorem blah blah blah
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://thecodeofeverything.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 exclude: ["node_modules", "gulpfile.js", "package.json"]
@@ -14,3 +14,6 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 # Build settings
 markdown: kramdown
+
+source: ./app/
+destination: ./site/

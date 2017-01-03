@@ -1,0 +1,10 @@
+---
+layout: default
+title: The Code Of Everything
+---
+
+{% for post in site.posts %}
+
+  {{ content | truncatewords: 10}}
+
+{% endfor %}
