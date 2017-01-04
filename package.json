@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/Utkarshbhimte/theCodeOfEverything/issues"
   },
-  "homepage": "https://github.com/Utkarshbhimte/theCodeOfEverything"
+  "homepage": "https://github.com/Utkarshbhimte/theCodeOfEverything",
+  "dependencies": {
+    "run-sequence": "^1.2.2"
+  }
 }
