@@ -44,7 +44,7 @@ gulp.task('browser-sync', ['build'], function() {
 });
 
 gulp.task('build', function(done) {
-  runSequence('jekyll-build', 'sass', done);
+  runSequence('jekyll-build', 'sass', 'compress', done);
 });
 
 /**
@@ -80,6 +80,7 @@ gulp.task('watch', function () {
     gulp.watch('app/_jadefiles/*.jade', ['jade', 'jekyll-rebuild']);
     gulp.watch(['app/*.html', 'app/_layouts/*.html', 'app/_posts/*'], ['jekyll-rebuild']);
     gulp.watch('app/_assets/css/*.sass', ['sass']);
+    gulp.watch('app/_assets/js/*.js', ['compress']);
     gulp.watch('app/manifest.json',['manifest-transfer']);
 });
 
