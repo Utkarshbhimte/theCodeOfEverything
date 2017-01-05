@@ -71,6 +71,11 @@ gulp.task('compress', function(cb) {
     );
 });
 
+gulp.task('image', function () {
+  gulp.src('app/_assets/images/*','app/_assets/images/**/*')
+    .pipe(image())
+    .pipe(gulp.dest('site/assets/images/'));
+});
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
