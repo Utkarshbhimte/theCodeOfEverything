@@ -61,6 +61,16 @@ gulp.task('sass', function () {
         // .pipe(gulp.dest('site/assets/css'))
 });
 
+gulp.task('jade', function(){
+  gulp.src('app/_jadefiles/includes')
+    .pipe(jade())
+    .pipe(gulp.dest('app/_includes'))
+
+    gulp.src('app/_jadefiles/layouts')
+      .pipe(jade())
+      .pipe(gulp.dest('app/_layouts'))
+});
+
 gulp.task('compress', function(cb) {
     pump([
             gulp.src('app/_assets/js/*.js'),
