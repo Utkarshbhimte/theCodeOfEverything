@@ -62,13 +62,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('jade', function(){
-  gulp.src('app/_jadefiles/includes')
+  return gulp.src('app/_jadefiles/includes/*.jade')
     .pipe(jade())
-    .pipe(gulp.dest('app/_includes'))
-
-    gulp.src('app/_jadefiles/layouts')
-      .pipe(jade())
-      .pipe(gulp.dest('app/_layouts'))
+    .pipe(gulp.dest('app/_includes/'))
 });
 
 gulp.task('compress', function(cb) {
