@@ -58,7 +58,7 @@ gulp.task('sass', function () {
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('site/assets/css/'))
-        // .pipe(gulp.dest('site/assets/css'))
+        // .pipe(browserSync.stream());
 });
 
 gulp.task('jade', function(){
@@ -92,11 +92,12 @@ gulp.task('image', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('app/_assets/js/*.js', ['compress']);
-    gulp.watch('app/_jadefiles/*.jade', ['jade', 'jekyll-rebuild']);
+    gulp.watch('app/_jadefiles/**/*.jade', ['jade', 'jekyll-rebuild']);
     gulp.watch(['app/*.html', 'app/_layouts/*.html', 'app/_posts/*'], ['jekyll-rebuild']);
     gulp.watch('app/_assets/css/*.sass', ['sass']);
     gulp.watch('app/_assets/js/*.js', ['compress']);
     gulp.watch('app/manifest.json',['manifest-transfer']);
+    browserSync.reload();
 });
 
 /**
