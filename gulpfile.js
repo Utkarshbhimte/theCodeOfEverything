@@ -9,6 +9,8 @@ var cleanCSS    = require('gulp-clean-css');
 var uglify      = require('gulp-uglify');
 var pump        = require('pump');
 var runSequence = require('run-sequence');
+var ghPages = require('gulp-gh-pages');
+
 
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -81,6 +83,11 @@ gulp.task('image', function () {
   gulp.src('app/_assets/images/*','app/_assets/images/**/*')
     .pipe(image())
     .pipe(gulp.dest('site/assets/images/'));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
 /**
  * Watch scss files for changes & recompile
